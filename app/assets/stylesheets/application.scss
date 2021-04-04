@@ -16,6 +16,11 @@
 
 @import "bootstrap/scss/bootstrap";
 
-.field-box {
-  width: 100%;
+
+.form-field {
+  margin-bottom: 1rem;
+
+  &-box {
+    width: 100%;
+  }
 }
