@@ -1,24 +1,100 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 目的
 
-Things you may want to cover:
+実践アプリ制作メンバー選定の為のスキルチェックテスト
 
-* Ruby version
+### クローン元のURL
 
-* System dependencies
+[https://wc-skill-test.herokuapp.com/users/sign_in](https://wc-skill-test.herokuapp.com/users/sign_in)
 
-* Configuration
+## 開発環境
 
-* Database creation
+- Ruby 2.7.2
+- Rails 6.1.3.1
+- PostgreSQL
 
-* Database initialization
+### ライブラリ
 
-* How to run the test suite
+- devise
+- bootstrap
 
-* Services (job queues, cache servers, search engines, etc.)
+## 仕様
 
-* Deployment instructions
+ユーザーを新規作成してログイン後にトップページを表示させる。
 
-* ...
+- ユーザー新規作成機能
+- ログイン機能
+- ログアウト機能
+- トップページ
+- 各種ページのスタイル調整
+
+### 画面構成
+
+- ログイン画面
+- アカウント新規作成画面
+- トップページ
+
+## 必須機能
+
+### ログイン画面
+
+- メールアドレスとパスワードによるログイン
+- ログインを記憶するチェックボックスあり
+- ログイン中はアクセスできない(トップページへリダイレクト)
+- ログイン成功時にはフラッシュメッセージを表示
+
+### アカウント新規作成画面
+
+- メールアドレス、パスワード、パスワードの確認で新規作成
+- 未入力欄があると新規作成できない
+- 足りてない情報についてエラーメッセージを表示
+- ログイン中はアクセスできない(トップページへリダイレクト)
+
+### トップページ
+
+- ログイン中でないとアクセスできない(ログイン画面へリダイレクト)
+- ログイン中のユーザーのメールアドレスを表示
+- ログインしてる時のみヘッダーを表示
+- ヘッダーにログアウトボタン設置(ログアウト後にメッセージが表示される)
+
+## 開発要領
+
+タスク管理はGithubのissueにて行う。
+
+### 1. issue作成
+
+- GitHubリポジトリの `Issues` タブをクリック
+- 「New issue」ボタンをクリック
+- 「Title」と「comment」を記載
+- 右側の「Labels」は原則 `enhancement`，「Projects」 は　`Pre-Challenge` を選択
+- 「Milestone」を設定して「Assignees」で自分を選択
+- 「Submit new issue」ボタンをクリック
+
+### 2. 実装開始
+
+1. GitHubの Projects タブから「カンバン」に移動し，「To do」に入っている issue の中から1つを選択
+2. 選択した issue を「In progress」に移動
+3. develop ブランチからブランチを切る
+4. 実装中は add, commit をこまめに行う
+5. 動作確認を行った上で，GitHubにプッシュ
+6. GitHubでプルリクを作成(テンプレートに沿って記述)
+7. GitHub で Files changed を確認して問題なければマージ。すぐにリモートリポジトリのブランチ削除
+8. ローカルでdevelopブランチに戻り最新の状態をプル
+9. 再度2-1に戻り実装を進めていく。
+
+## 実装上の注意点
+
+### ブランチモデル
+
+|ブランチ名  |目的  |備考  |
+|---|---|---|
+|main  |リリース用  |  |
+|develop  |開発用  |機能実装時はこのブランチから切ること！  |
+|feature/＊＊＊  |機能実装用  |派生元はdevelopブランチとすること！  |
+
+- 必ずブランチを切って作業すること(mainやdevelopで作業しない！)
+- 機能実装用のブランチ名は `feature/＊＊＊`の形式とする。
+- ブランチ名は「issueのタスク名」を2〜4単語の英語で表したものとする。
+- 実装開始前にissueを作成する。
+- プルリク作成する際はテンプレートに沿って書くこと
