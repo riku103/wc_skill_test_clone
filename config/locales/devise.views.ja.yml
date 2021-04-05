@@ -125,7 +125,7 @@ ja:
         sign_in: ログインはこちら
         sign_in_with_provider: "%{provider}でログイン"
         sign_up: 新規作成はこちら
-      minimum_password_length: "（%{count}字以上で入力してください）"
+      minimum_password_length: "（%{count}字以上で入力ください）"
     unlocks:
       new:
         resend_unlock_instructions: アカウントのロック解除方法を再送する
