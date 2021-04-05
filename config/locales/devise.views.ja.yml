@@ -16,7 +16,7 @@ ja:
         last_sign_in_ip: 最終ログインIPアドレス
         locked_at: ロック時刻
         password: パスワード
-        password_confirmation: パスワード（確認用）
+        password_confirmation: 確認用パスワード
         remember_created_at: ログイン記憶時刻
         remember_me: ログインを記憶
         reset_password_sent_at: パスワードリセット送信時刻
@@ -101,7 +101,8 @@ ja:
         update: 更新
         we_need_your_current_password_to_confirm_your_changes: 変更を反映するには現在のパスワードを入力してください
       new:
-        sign_up: アカウント登録
+        sign_up: アカウントの作成
+        sign_up_btn: 新規作成
       signed_up: アカウント登録が完了しました。
       signed_up_but_inactive: ログインするためには、アカウントを有効化してください。
       signed_up_but_locked: アカウントがロックされているためログインできません。
@@ -121,10 +122,10 @@ ja:
         didn_t_receive_confirmation_instructions: アカウント確認のメールを受け取っていませんか？
         didn_t_receive_unlock_instructions: アカウントのロック解除方法のメールを受け取っていませんか？
         forgot_your_password: パスワードを忘れましたか？
-        sign_in: ログイン
+        sign_in: ログインはこちら
         sign_in_with_provider: "%{provider}でログイン"
         sign_up: 新規作成はこちら
-      minimum_password_length: "（%{count}字以上）"
+      minimum_password_length: "（%{count}字以上で入力ください）"
     unlocks:
       new:
         resend_unlock_instructions: アカウントのロック解除方法を再送する
